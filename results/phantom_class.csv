@@ -1,0 +1,3 @@
+﻿tag,split,weights,n_images,gt_class0,gt_class1,det_class0,det_class1,det_class2_phantom,images_with_phantom,phantom_rate_per_image,phantom_mean_conf,phantom_max_conf,conf_threshold,n_phantom_ge_05,note
+zero_shot,test,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\runs\pw_yolo_source_pretrain\weights\best.pt,600,5793,797,36293,3119,5791,379,0.6317,0.0114,0.8245,0.001,14,conf=0.001 是 AP 评估口径（全阈值统计）
+zero_shot,test,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\runs\pw_yolo_source_pretrain\weights\best.pt,600,5793,797,,,47,35,0.0583,0.4267,0.8245,0.25,14,conf>=0.25 部署误检量级参考；conf>=0.5 框数见 n_phantom_ge_05

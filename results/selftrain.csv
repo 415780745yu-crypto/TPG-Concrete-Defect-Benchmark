@@ -1,0 +1,4 @@
+﻿tag,conf_thr,n_pseudo_boxes,images_with_pseudo,map50,note
+st500_thr050,0.5,123,91,,self-training
+st500_thr025,0.25,354,192,0.0884,self-training
+st500_thr010,0.1,855,299,0.0815,self-training

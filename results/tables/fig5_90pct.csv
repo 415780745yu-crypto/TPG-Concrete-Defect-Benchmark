@@ -1,0 +1,2 @@
+﻿target_only_upper,zero_shot_lower,shot50_map50,shot50_recovery_ratio_pct,note_90pct
+0.696,0.0459,0.26,37.4,50-shot 仅恢复到上界 0.696 的 37.4%；达到 90% 所需标注量远超本文考察范围，不做线性外推

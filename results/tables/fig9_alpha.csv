@@ -1,0 +1,5 @@
+﻿alpha,repeat_dir,pseudo_images,mAP50,delta_vs_alpha0
+0.0,repeat-A (25.3x repeat),,0.3749,0.0
+0.5,50% pseudo (12.65x repeat),,0.364,-0.0109
+0.75,75% pseudo (6.33x repeat),,0.3716,-0.0033
+1.0,A-PL (no repeat),,0.413,0.0381

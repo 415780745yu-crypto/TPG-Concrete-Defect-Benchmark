@@ -1,0 +1,4 @@
+﻿tag,protocol,weights,data,split,map50,map5095,params_M,gflops,imgsz,note,ap50_crack,ap50_spalling,ap50_moisture
+a0_baseline,ablation,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\runs\pw_yolo_source_pretrain\weights\best.pt,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\data\cubit_det.yaml,test,0.7153,0.4506,3.0062,8.085,640,,0.7077,0.8578,0.5804
+a1_ghostnet,ablation,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\runs\pw_yolo_a1_ghostnet\weights\best.pt,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\data\cubit_det.yaml,test,0.4603,0.2548,2.2983,6.155,640,,0.4533,0.648,0.2795
+a0_scratch,ablation,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\runs\pw_yolo_a0_scratch\weights\best.pt,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\data\cubit_det.yaml,test,0.5554,0.3152,3.0062,8.085,640,from scratch,0.5538,0.7404,0.3722

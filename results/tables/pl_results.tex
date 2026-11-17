@@ -1,0 +1,19 @@
+% 方案 A（伪标签自训练）结果表 —— 由 scripts/34_pl_latex_table.py 自动生成
+\begin{table}[htbp]
+\centering
+\caption{Pseudo-label self-training on the DamCrack target domain. All models start from the same source-pretrained checkpoint and are trained with identical hyper-parameters (50 epochs, seed 42); the only difference is whether pseudo-labelled images are added to the training set. GT boxes: number of ground-truth boxes in the annotated subset; pseudo:gt: ratio of pseudo-labelled to ground-truth boxes.}
+\label{tab:pseudo-label}
+\begin{tabular}{lrrrrrr}
+\toprule
+Tier & GT boxes & pseudo:gt & A (mAP50) & A-PL (mAP50) & $\Delta$ & Rel. gain \\
+\midrule
+shot10 & 71 & 1:13 & 0.0724 & 0.1294 & $+0.0570$ & +78.7\% \\
+shot20 & 80 & 1:21 & 0.0738 & 0.1288 & $+0.0550$ & +74.5\% \\
+shot30 & 157 & 1:100 & 0.1571 & 0.2188 & $+0.0617$ & +39.3\% \\
+shot50 & 272 & 1:68 & 0.2424 & 0.3111 & $+0.0687$ & +28.3\% \\
+img100 & 1161 & 1:15 & 0.3854 & 0.4130 & $+0.0276$ & +7.2\% \\
+img200 & 2276 & 1:10 & 0.4575 & 0.4922 & $+0.0347$ & +7.6\% \\
+img500 & 5593 & 1:4 & 0.5560 & 0.5764 & $+0.0204$ & +3.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,3 @@
+﻿tag,weights,n_images,map50_clean,map50_full_test,delta_clean_minus_full,ap50_crack,ap50_spalling,ap50_moisture
+source_only_clean,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\runs\pw_yolo_source_pretrain\weights\best.pt,695,0.7095,0.7153,-0.0058,0.6862,0.8664,0.5758
+a1_clean,C:\Users\zhenbai\Desktop\Pytorch\PW-YOLO\runs\pw_yolo_a1_ghostnet\weights\best.pt,695,0.4509,0.4603,-0.0094,0.4193,0.6504,0.283

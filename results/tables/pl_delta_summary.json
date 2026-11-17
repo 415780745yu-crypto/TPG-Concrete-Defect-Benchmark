@@ -1,0 +1,16 @@
+{
+  "n_tiers": 7,
+  "mean_delta": 0.0464,
+  "sd": 0.0186,
+  "se": 0.007,
+  "ci95_low": 0.0292,
+  "ci95_high": 0.0637,
+  "all_positive": true,
+  "min_delta": 0.0204,
+  "max_delta": 0.0687,
+  "t_stat": 6.59,
+  "df": 6,
+  "t_crit_0.05": 2.447,
+  "significant": true,
+  "note": "Single-seed (42) per tier; SE computed ACROSS TIERS (label budgets), NOT across seeds. Measures consistency across budgets, not sampling error."
+}

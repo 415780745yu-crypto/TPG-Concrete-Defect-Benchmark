@@ -1,0 +1,5 @@
+﻿variant,n_images,map50,map5095,ap50_crack,ap50_spalling,delta_vs_T0,recovery_ratio,recovery_note,caveat
+T0_original,600,0.0465,0.0197,0.0317,0.0614,0.0,0.0,fraction of gap to target-only upper bound,"sensitivity only; variants are not independent, do not sum"
+T1_photometric,600,0.0444,0.0201,0.0343,0.0546,-0.0021,-0.0032,fraction of gap to target-only upper bound,"sensitivity only; variants are not independent, do not sum"
+T2_scale,600,0.04,0.018,0.0323,0.0477,-0.0065,-0.01,fraction of gap to target-only upper bound,"sensitivity only; variants are not independent, do not sum"
+T3_texture,600,0.0398,0.0179,0.0342,0.0455,-0.0067,-0.0103,fraction of gap to target-only upper bound,"sensitivity only; variants are not independent, do not sum"

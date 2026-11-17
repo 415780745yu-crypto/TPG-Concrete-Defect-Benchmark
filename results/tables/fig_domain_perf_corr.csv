@@ -1,0 +1,5 @@
+﻿channel,metric,spearman_rho,p,n,note
+photometric,recall,-0.012,0.774,574,excludes empty-label images
+spectral,recall,0.1622,0.0001,574,excludes empty-label images
+photometric,precision,-0.06,0.1422,599,includes empty-label images where defined
+spectral,precision,0.023,0.5737,599,includes empty-label images where defined

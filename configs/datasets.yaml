@@ -1,0 +1,86 @@
+
+project_root: "."
+
+seed: 42
+imgsz: 640
+baseline_weights: "yolov8n.pt"
+
+# 类别协议（骨架 §3.2）
+# 目标域 2 类、源域 3 类：mAP50^T 与 mAP50^S 不是同一指标，禁止混用。
+classes:
+  source: {0: crack, 1: spalling, 2: moisture}
+  target: {0: crack, 1: spalling}
+
+datasets:
+  cubit_det:
+    # 标准 Ultralytics 布局（实测 2026-11-09）：
+    #   images/        = 640×480 近似等比预缩放训练副本，5525 张，651 MB（10_ 脚本生成）
+    #   labels/        = YOLO txt，5525 个（等比缩放，归一化坐标无需调整）
+    #   Annotations/   = 原始 VOC XML，5527 个
+    #   images_full/   = 4624×3472 原图，17.8 GB（保留供域间隙统计等分析，不参与训练）
+    # 目录名必须是 images/：Ultralytics 按 images→labels 推标签路径，
+    # 曾因改名成 images_640 导致 "no labels found"、box_loss=0，已修正。
+    # 实际管线等价性自检：MAE 2.214/255、PSNR 36.30 dB。
+    # VOC 类别名已核实：crack / spalling / moisture。
+    root: "D:/YaLi/CUBIT-Det"
+    image_dir: "images"
+    label_dir: "Annotations"
+    yolo_label_dir: "labels"      # 转换产物，脚本自动写入同名 .txt
+    image_ext: ".jpg"
+    label_format: "voc_xml"       # 官方分发 VOC XML，脚本自动转 YOLO
+    source_class_ids: {crack: 0, spalling: 1, moisture: 2}   # 已核实，勿改
+  damcrack:
+    # 实测 2026-11-08 19:24：真实路径 D:/YaLi/Damage Detection（此前误记为「雅莲姐」，已更正）
+    # images 4000 张 A*.jpg；labels/Yolo 4000 个同名 txt；labels/Pascal Voc 4000 个 XML
+    # 全量统计：class 0 = 39056 实例、class 1 = 4982 实例、172 个空标签（负样本）
+    root: "D:/YaLi/Damage Detection"
+    image_dir: "images"
+    label_dir: "labels/Yolo"
+    image_ext: ".jpg"
+    label_format: "yolo_txt"      # 自带 YOLO txt，不做格式转换
+    source_class_ids: {0: 0, 1: 1}   # 官方已是 0/1，恒等映射，不改写标签文件
+    parent_id_field: null         # 文件名无母图前缀 -> near_duplicate 近似分组
+
+split:
+  ratios: {train: 0.70, val: 0.15, test: 0.15}
+  strategy: "filename_window"     # 实测 dHash 只分出 3956 组（近乎随机），改用连续编号窗口分组
+  filename_window: 20             # A1…A4000 连续编号；每 20 张视为一个近似采集批次，共 200 组
+  near_duplicate_hamming: 8       # 保留给 near_duplicate 策略；当前未启用
+
+fewshot:
+  shots: [10, 20, 30, 50]
+  unit: "instances_per_class"     # 骨架 §3.5 要求写死；不要改成 images 而不在论文中说明
+  seeds: [42, 43, 44]
+  include_full_ft: true
+  include_target_only: true
+
+train:
+  # 2026-11-08 实测：Anaconda base = Python 3.12.4 / torch 2.4.0+cu118 / RTX 2060 6GB，
+  # CUDA 卷积算子已跑通。6GB 显存下 batch 8、workers 2 更稳；不要误用 pytorch env（torch 1.13.1+cu116）。
+  epochs: 100
+  batch: 8
+  patience: 20
+  device: "0"                    # 用 base 环境；已确认 torch.cuda.is_available()=True
+  workers: 2                     # Windows 下 workers 过大易触发 multiprocessing 问题
+  project: "runs"
+  name_prefix: "pw_yolo"
+
+deploy:
+  imgsz: 640
+  dynamic: false                 # 必须为 false，PNNX 需静态 shape
+  simplify: true
+  warmup: 10
+  repeats: 100
+  threads: 4
+  platforms: ["x86_cpu"]         # 主平台；ARM 单板机为可选补充
+  precisions: ["fp32", "int8"]
+  int8_calib_images: 1000           # TODO 若做 INT8，填校准集张数，并在表 6 记录量化后 mAP
+
+# 方案 A：域间隙敏感性分析（scripts/09_domain_gap_attribution.py）
+# 性质：诊断性实验，不是新算法；论文措辞只能是 sensitivity analysis / partially alleviates。
+domain_gap:
+  stat_sample: 200               # 计算两域全局光度统计的抽样张数
+  scale_factor: 2                # T2 下采样倍数（会 resize 回原尺寸，标签不变）
+  blur_kernel: 3                 # T3 高斯核尺寸
+  jpeg_quality: 95              # 变体图像写盘质量
+  upper_reference: "target_only" # 用 crossdomain.csv 中该 tag 作为可恢复空间上界

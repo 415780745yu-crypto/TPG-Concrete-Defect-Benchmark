@@ -1,0 +1,7 @@
+﻿domain,image,w,h,n_boxes,per_class
+Source,hk0000.jpg,380,285,2,1:2
+Source,hk0001.jpg,380,285,2,0:1;1:1
+Source,hk0002.jpg,380,285,2,1:2
+Target,A1.jpg,380,380,22,0:21;1:1
+Target,A2.jpg,380,380,21,0:21
+Target,A3.jpg,380,380,6,0:6

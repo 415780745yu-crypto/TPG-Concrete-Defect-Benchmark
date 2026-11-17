@@ -1,0 +1,8 @@
+path: D:/YaLi/Damage Detection
+train: C:/Users/zhenbai/Desktop/Pytorch/PW-YOLO/data/fewshot_img/img100_seed43.txt
+val: C:/Users/zhenbai/Desktop/Pytorch/PW-YOLO/data/splits/damcrack_val.txt
+test: C:/Users/zhenbai/Desktop/Pytorch/PW-YOLO/data/splits/damcrack_test.txt
+nc: 2
+names:
+  0: crack
+  1: spalling

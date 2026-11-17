@@ -1,0 +1,10 @@
+﻿shots,seed,unit,images,actual_instances_crack,actual_instances_spalling,yaml
+100,42,images,100,1014,147,img100_seed42.yaml
+200,42,images,200,1991,285,img200_seed42.yaml
+500,42,images,500,4934,659,img500_seed42.yaml
+100,43,images,100,992,139,img100_seed43.yaml
+100,44,images,100,948,136,img100_seed44.yaml
+200,43,images,200,1959,263,img200_seed43.yaml
+200,44,images,200,1936,283,img200_seed44.yaml
+500,43,images,500,5142,693,img500_seed43.yaml
+500,44,images,500,5279,670,img500_seed44.yaml

@@ -1,0 +1,7 @@
+﻿tag,precision,map50,size_MB,latency_ms_mean,fps
+yolov8n_scratch_fp32,fp32,0.5554,12.144,101.01,9.9
+pw_yolo_ghostnet_fp32,fp32,0.4603,9.317,96.253,10.39
+yolov8n_pretrain_fp32,fp32,0.7153,12.144,98.2,10.18
+pw_yolo_ghostnet_int8_aciq1000,int8,0.4317,2.457,75.871,13.18
+yolov8n_scratch_int8_aciq1000,int8,0.539,3.161,63.201,15.82
+yolov8n_pretrain_int8_aciq1000,int8,0.6942,3.161,66.69,14.99

@@ -1,0 +1,10 @@
+﻿tag,map50
+pw_yolo_ghostnet_int8_kl_300,0.3778
+pw_yolo_ghostnet_int8_bgr_kl_300,0.3832
+yolov8n_scratch_int8_kl_300,0.4533
+yolov8n_pretrain_int8_kl_300,0.619
+pw_yolo_ghostnet_int8_aciq_1000,0.4317
+yolov8n_scratch_int8_aciq_1000,0.539
+yolov8n_pretrain_int8_aciq_1000,0.6942
+target_only_int8_aciq1000,0.615
+target_only_int8_aciq2800,0.6127

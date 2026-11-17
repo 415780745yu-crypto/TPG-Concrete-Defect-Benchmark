@@ -1,0 +1,8 @@
+﻿tier,net_test,val_peak_diff,agree
+shot10,-0.0186,-0.0152,True
+shot20,-0.0314,-0.0378,True
+shot30,0.0095,-0.0191,False
+shot50,0.0507,0.0401,True
+img100,0.0381,0.0308,True
+img200,0.0304,0.0239,True
+img500,0.0185,0.0049,True

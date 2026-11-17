@@ -1,0 +1,9 @@
+﻿tag,backend,n_boxes_pt,n_boxes_backend,max_abs_coord_diff_px,max_abs_score_diff,verdict
+yolov8n_scratch,onnx,72,72,0.0,0.0,PASS
+yolov8n_scratch,ncnn,72,72,0.0,0.0,PASS
+pw_yolo_ghostnet,onnx,249,249,0.003,0.0,PASS
+pw_yolo_ghostnet,ncnn,249,249,0.001,0.0,PASS
+yolov8n_pretrain,onnx,50,50,0.0,0.0,PASS
+yolov8n_pretrain,ncnn,50,50,0.002,0.0,PASS
+target_only,onnx,49,49,0.001,0.0,PASS
+target_only,ncnn,49,49,0.0,0.0,PASS

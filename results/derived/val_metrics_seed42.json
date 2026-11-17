@@ -1,0 +1,58 @@
+[
+  {
+    "tier": "shot10",
+    "val_peak": 0.05289,
+    "val_final": 0.05289,
+    "epochs": 50,
+    "test": 0.0724
+  },
+  {
+    "tier": "shot20",
+    "val_peak": 0.06141,
+    "val_final": 0.06141,
+    "epochs": 50,
+    "test": 0.0738
+  },
+  {
+    "tier": "shot30",
+    "val_peak": 0.12598,
+    "val_final": 0.12598,
+    "epochs": 50,
+    "test": 0.1571
+  },
+  {
+    "tier": "shot40",
+    "val_peak": 0.17331,
+    "val_final": 0.17331,
+    "epochs": 50,
+    "test": 0.2062
+  },
+  {
+    "tier": "shot50",
+    "val_peak": 0.22518,
+    "val_final": 0.22314,
+    "epochs": 50,
+    "test": 0.2424
+  },
+  {
+    "tier": "img100",
+    "val_peak": 0.36083,
+    "val_final": 0.35351,
+    "epochs": 50,
+    "test": 0.3854
+  },
+  {
+    "tier": "img200",
+    "val_peak": 0.42499,
+    "val_final": 0.42499,
+    "epochs": 50,
+    "test": 0.4575
+  },
+  {
+    "tier": "img500",
+    "val_peak": 0.52773,
+    "val_final": 0.52248,
+    "epochs": 50,
+    "test": 0.556
+  }
+]

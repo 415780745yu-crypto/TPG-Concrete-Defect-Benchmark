@@ -1,0 +1,19 @@
+% 方案 A 3-seed 汇总 —— 由 scripts/35_pl_3seed_summary.py 自动生成
+\begin{table}[htbp]
+\centering
+\caption{Pseudo-label self-training over three annotation-sampling seeds (42/43/44). $\Delta$ is computed \emph{within} each seed (A-PL $-$ A) and then averaged, so that seed-specific sampling is cancelled. Errors are population standard deviations (ddof $=0$).}
+\label{tab:pseudo-label-3seed}
+\begin{tabular}{lrrrrr}
+\toprule
+Tier & $n$ & A (mAP50) & A-PL (mAP50) & $\Delta \pm$ SD & Rel. gain \\
+\midrule
+shot10 & 3 & 0.0977$\pm$0.0215 & 0.1494$\pm$0.0154 & $+0.0517\pm0.0070$ & +53.0\% \\
+shot20 & 3 & 0.1226$\pm$0.0352 & 0.1758$\pm$0.0340 & $+0.0532\pm0.0139$ & +43.4\% \\
+shot30 & 3 & 0.1920$\pm$0.0255 & 0.2462$\pm$0.0197 & $+0.0543\pm0.0114$ & +28.3\% \\
+shot50 & 3 & 0.2600$\pm$0.0127 & 0.3153$\pm$0.0079 & $+0.0554\pm0.0105$ & +21.3\% \\
+img100 & 3 & 0.3866$\pm$0.0072 & 0.4238$\pm$0.0076 & $+0.0372\pm0.0100$ & +9.6\% \\
+img200 & 3 & 0.4613$\pm$0.0027 & 0.4970$\pm$0.0036 & $+0.0357\pm0.0013$ & +7.7\% \\
+img500 & 3 & 0.5514$\pm$0.0068 & 0.5698$\pm$0.0056 & $+0.0184\pm0.0032$ & +3.3\% \\
+\bottomrule
+\end{tabular}
+\end{table}

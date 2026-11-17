@@ -1,0 +1,5 @@
+﻿shots,map50,recovery_ratio,recoverable_gap,note
+10,0.0977,0.0797,0.6501,mean over 3 seeds; no extrapolation beyond tested range
+20,0.1226,0.118,0.6501,mean over 3 seeds; no extrapolation beyond tested range
+30,0.192,0.2247,0.6501,mean over 3 seeds; no extrapolation beyond tested range
+50,0.26,0.3293,0.6501,mean over 3 seeds; no extrapolation beyond tested range

@@ -1,0 +1,3 @@
+﻿variant,n_images,map50,map5095,ap50_crack,ap50_spalling,ap50_moisture,baseline_map50,delta_vs_baseline,note
+T2_scale,830,0.6509,0.4055,0.5826,0.823,0.5471,0.7153,-0.0644,source-control: 与目标域侧参数一致，施加到 CUBIT-Det 源域测试集（3 类）
+T3_texture,830,0.6321,0.3922,0.6054,0.7601,0.5307,0.7153,-0.0832,source-control: 与目标域侧参数一致，施加到 CUBIT-Det 源域测试集（3 类）

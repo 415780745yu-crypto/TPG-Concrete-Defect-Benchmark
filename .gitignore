@@ -1,0 +1,20 @@
+# Data and weights are not redistributed
+data/pseudo_pl/
+data/pseudo_pl_rpt/
+data/pseudo_pl_mix/
+data/pseudo/
+data/int8_calib/
+*.pt
+*.pth
+*.onnx
+*.jpg
+*.jpeg
+*.png
+!results/figs/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.env

@@ -1,0 +1,16 @@
+﻿shots,seed,unit,images,actual_instances_crack,actual_instances_spalling,yaml
+10,42,instances_per_class,5,15,18,shot10_seed42.yaml
+10,43,instances_per_class,11,19,10,shot10_seed43.yaml
+10,44,instances_per_class,10,20,12,shot10_seed44.yaml
+20,42,instances_per_class,7,24,20,shot20_seed42.yaml
+20,43,instances_per_class,21,21,21,shot20_seed43.yaml
+20,44,instances_per_class,13,20,20,shot20_seed44.yaml
+30,42,instances_per_class,15,53,30,shot30_seed42.yaml
+30,43,instances_per_class,30,37,30,shot30_seed43.yaml
+30,44,instances_per_class,25,46,32,shot30_seed44.yaml
+50,42,instances_per_class,28,53,54,shot50_seed42.yaml
+50,43,instances_per_class,38,55,50,shot50_seed43.yaml
+50,44,instances_per_class,38,51,51,shot50_seed44.yaml
+40,42,instances_per_class,22,53,40,shot40_seed42.yaml
+40,43,instances_per_class,36,48,41,shot40_seed43.yaml
+40,44,instances_per_class,31,46,40,shot40_seed44.yaml

@@ -1,0 +1,16 @@
+﻿tier,gt_boxes,net_benefit,sd
+shot10,71,-0.0385,0.0231
+shot20,80,-0.027,0.0104
+shot30,157,0.0154,0.0053
+shot50,272,0.0372,0.0154
+img100,1161,0.0395,0.0061
+img200,2276,0.0351,0.0123
+img500,5593,0.0161,0.0034
+
+estimator,threshold_boxes
+linear_interp,129.0
+log_interp,122.9
+logistic_half,131.2
+bootstrap_median,129.0
+bootstrap_ci_low,116.0
+bootstrap_ci_high,138.4
